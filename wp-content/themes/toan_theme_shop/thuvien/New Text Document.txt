@@ -1,0 +1,21 @@
+.thanh_ngang_top{
+	background-color: #333;
+    height: 30px;
+    border-bottom: 1px solid #ccc;
+    color: #fff;
+    font-size: 11px;
+    z-index: 99;
+    position: relative;
+    }
+.tn_search{
+	float: right;
+}
+.tn_top{
+float: left;
+}
+.tn_search form{
+	float: left;
+}
+.tn_search .show_cart_top{
+	float: left;
+}

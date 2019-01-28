@@ -11,21 +11,23 @@
 					<div class="container">
 						<div class="row">
 							<div class="box-logo col-lg-2 col-4">
-								<a href="" class="logo"><img class="img-fluid" src="<?php bloginfo('template_directory');?>/img/phan-gia-huy.png" alt=""></a>
+							<!-- #logo -->
+								<?php 
+  								 $custom_logo_id = get_theme_mod( 'custom_logo' );
+   								 $image = wp_get_attachment_image_src( $custom_logo_id , 'full' ); ?>
+								<img class="img-fluid" src="<?php echo $image[0]; ?>" alt="">
+
+								<!-- #logo -->
 							</div>
 							<div class="box-menu col-lg-10">
 								<nav id="drop_down">
-									<ul class="lh2-ul">
-										<li class="active"><a href="">Trang chủ</a></li>
-										<li><a href="">Giới thiệu</a>
-											<ul>
-												<li><a href="">Về chúng tôi</a></li>
-												<li><a href="">Mục tiêu</a></li>
-											</ul>
-										</li>
-										<li><a href="">Bán xe du lịch</a></li>
-										
-									</ul>
+								<!-- 	menu -->
+									<?php
+wp_nav_menu( array( 
+    'theme_location' => 'my-custom-menu', 
+    'container_class' => 'custom-menu-class' ) ); 
+?>
+<!-- #menu -->
 								</nav>
 							</div>
 						</div>
